@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HireIntel · AI Hiring Intelligence · SNTL 84</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="scanlines"></div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-tag">SNTL 84</span>
+      <span class="brand-dot">/</span>
+      <span class="brand-name">HireIntel</span>
+    </div>
+    <nav class="header-nav">
+      <a href="#how" class="nav-link">How It Works</a>
+      <a href="https://desidevloper.com" target="_blank" class="nav-link">Website</a>
+      <a href="https://wa.me/919727413309" target="_blank" class="nav-cta">Hire Me →</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      AI HIRING INTELLIGENCE
+    </div>
+    <h1 class="hero-title">Evaluate<br /><em>Fast.</em><br />Hire Right.</h1>
+    <p class="hero-sub">No participation trophies. Paste a resume, get a strict score, matched skills, risks, and a clear verdict in 3 seconds.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">3s</span>
+        <span class="stat-label">Avg eval time</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">0–40</span>
+        <span class="stat-label">Reject range</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <span class="stat-num">71+</span>
+        <span class="stat-label">Shortlist range</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APP -->
+<main class="app-container">
+  <div class="app-grid">
+    <!-- INPUT PANEL -->
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-label">01</span>
+        <span class="panel-title">INPUT Candidate Data</span>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="jobRole">JOB ROLE <span class="field-hint">(optional)</span></label>
+        <input type="text" id="jobRole" class="text-input" placeholder="e.g. Senior Backend Engineer" maxlength="100" />
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="resumeText">RESUME TEXT</label>
+        <textarea id="resumeText" class="resume-input" placeholder="Paste full resume text here...
+Includes: experience, skills, education, projects—anything relevant." maxlength="8000"></textarea>
+        <div class="char-count"><span id="charCount">0</span> characters</div>
+      </div>
+
+      <div class="action-row">
+        <button id="analyzeBtn" class="btn-primary" onclick="analyzeResume()">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 1L13 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 7H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Evaluate Resume
+        </button>
+        <button class="btn-ghost" onclick="loadExample()">Load Example</button>
+      </div>
+    </div>
+
+    <!-- OUTPUT PANEL -->
+    <div class="panel" id="outputPanel">
+      <div class="panel-header">
+        <span class="panel-label">02</span>
+        <span class="panel-title">OUTPUT Analysis</span>
+      </div>
+
+      <!-- EMPTY STATE -->
+      <div id="emptyState" class="state-empty">
+        <div class="empty-icon">□</div>
+        <div class="empty-title">Awaiting Resume</div>
+        <div class="empty-sub">Paste a resume and hit Evaluate to get a strict, data-driven hiring decision.</div>
+      </div>
+
+      <!-- LOADING STATE -->
+      <div id="loadingState" class="state-loading hidden">
+        <div class="loading-ring">
+          <svg viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="52" fill="none" stroke="#222" stroke-width="6"/>
+            <circle class="loading-arc" cx="60" cy="60" r="52" fill="none" stroke="#e8ff3c" stroke-width="6" stroke-dasharray="80 246"/>
+          </svg>
+        </div>
+        <div class="loading-text">Evaluating candidate…</div>
+        <div class="loading-sub">Analyzing skills, experience, and business signals</div>
+      </div>
+
+      <!-- RESULT STATE -->
+      <div id="resultState" class="hidden">
+        <div class="result-top">
+          <div class="score-ring-wrap">
+            <svg class="score-ring" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="52" fill="none" stroke="#222" stroke-width="6"/>
+              <circle id="ringFill" cx="60" cy="60" r="52" fill="none" stroke="#e8ff3c" stroke-width="6"
+                stroke-dasharray="326.7" stroke-dashoffset="326.7"
+                stroke-linecap="round"
+                transform="rotate(-90 60 60)"
+                style="transition: stroke-dashoffset 1s ease, stroke 0.3s ease;"/>
+              <text x="60" y="56" text-anchor="middle" font-family="IBM Plex Mono" font-size="26" font-weight="500" fill="#e8e8e8" id="scoreNum">0</text>
+              <text x="60" y="72" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#666" letter-spacing="2">/100</text>
+            </svg>
+          </div>
+          <div class="result-meta">
+            <div id="decisionBadge" class="decision-badge">
+              <span id="decisionIcon"></span>
+              <span id="decisionText"></span>
+            </div>
+            <div id="resultMeta" class="result-meta-text"></div>
+          </div>
+        </div>
+
+        <div class="result-skills">
+          <div class="skills-col">
+            <div class="skills-label">MATCHED SKILLS</div>
+            <div id="matchedSkills" class="skills-list"></div>
+          </div>
+          <div class="skills-col">
+            <div class="skills-label missing">MISSING SKILLS</div>
+            <div id="missingSkills" class="skills-list"></div>
+          </div>
+        </div>
+
+        <div class="result-insights">
+          <div class="insights-grid">
+            <div class="insight-block">
+              <div class="insight-label">STRENGTHS</div>
+              <ul id="strengthsList" class="insight-list strengths"></ul>
+            </div>
+            <div class="insight-block">
+              <div class="insight-label risks">RISKS</div>
+              <ul id="risksList" class="insight-list risks"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-footer">
+          <button class="btn-ghost" onclick="resetForm()">Reset</button>
+          <button class="btn-ghost" onclick="copyResult()">Copy JSON</button>
+        </div>
+      </div>
+
+      <!-- ERROR STATE -->
+      <div id="errorState" class="state-error hidden">
+        <div class="error-icon">⚠</div>
+        <div class="error-title">Evaluation Failed</div>
+        <div id="errorMsg" class="error-msg"></div>
+        <button class="btn-ghost" onclick="resetForm()">Try Again</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIVE EXAMPLES -->
+  <section class="examples-section">
+    <div class="section-header">
+      <span class="section-tag">LIVE EXAMPLES</span>
+      <h2 class="section-title">See It In Action</h2>
+      <p class="section-sub">Click any example to load it and run a live evaluation</p>
+    </div>
+    <div class="examples-grid">
+      <div class="example-card" onclick="loadPreset('overqualified')">
+        <div class="example-verdict shortlist">SHORTLIST</div>
+        <div class="example-role">Senior Backend Engineer</div>
+        <div class="example-summary">10 yrs, led 4-person infra team, reduced latency 40%, shipped fintech at scale</div>
+        <div class="example-cta">Run this evaluation →</div>
+      </div>
+      <div class="example-card" onclick="loadPreset('buzzword')">
+        <div class="example-verdict reject">REJECT</div>
+        <div class="example-role">Marketing Manager</div>
+        <div class="example-summary">“Results-driven synergist with omnichannel mindset” — zero metrics, all buzzwords</div>
+        <div class="example-cta">Run this evaluation →</div>
+      </div>
+      <div class="example-card" onclick="loadPreset('junior')">
+        <div class="example-verdict consider">CONSIDER</div>
+        <div class="example-role">Full Stack Developer</div>
+        <div class="example-summary">2 yrs, shipped 3 real projects, some gaps in core skills but solid fundamentals</div>
+        <div class="example-cta">Run this evaluation →</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how">
+    <div class="section-header">
+      <span class="section-tag">SYSTEM</span>
+      <h2 class="section-title">How It Works</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-step">
+        <span class="step-num">01</span>
+        <div class="step-title">Input Resume + Role</div>
+        <div class="step-desc">Paste raw resume text. Add the job role for context-aware scoring.</div>
+      </div>
+      <div class="how-arrow">→</div>
+      <div class="how-step">
+        <span class="step-num">02</span>
+        <div class="step-title">AI Analysis</div>
+        <div class="step-desc">System evaluates skills, impact, measurability, and fluff ratio.</div>
+      </div>
+      <div class="how-arrow">→</div>
+      <div class="how-step">
+        <span class="step-num">03</span>
+        <div class="step-title">Business Decision</div>
+        <div class="step-desc">Get a score, matched/missing skills, risks, and a clear hiring verdict.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-name">Milan · SNTL 84</div>
+      <div class="footer-tagline">I Automate What’s Costing You Money.</div>
+      <div class="footer-sub">AI Workflow Developer · Surat, India</div>
+      <div class="footer-desc">AI Systems | Full-Stack Builds | Supply Chain Business Intelligence. Built for founders who move fast and waste nothing.</div>
+    </div>
+    <div>
+      <div class="footer-col-title">HIRE ME</div>
+      <div class="footer-col">
+        <a href="https://desidevloper.com" target="_blank" class="footer-link">🌐 desidevloper.com</a>
+        <a href="https://wa.me/919727413309" target="_blank" class="footer-link">💬 WhatsApp</a>
+        <a href="https://www.linkedin.com/in/sntl2784" target="_blank" class="footer-link">🔗 LinkedIn</a>
+        <a href="https://github.com/SNTL84" target="_blank" class="footer-link">💻 GitHub</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">PROJECT</div>
+      <div class="footer-col">
+        <a href="https://github.com/SNTL84/ai-hiring-intel" target="_blank" class="footer-link">Source Code</a>
+        <a href="https://github.com/SNTL84/ai-hiring-intel/fork" target="_blank" class="footer-link">Fork It</a>
+        <span class="footer-link" style="cursor:default">MIT License</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Milan · SNTL 84</span>
+    <span class="footer-sep">|</span>
+    <a href="https://github.com/SNTL84" target="_blank" class="footer-gh">github.com/SNTL84</a>
+    <span class="footer-sep">|</span>
+    <span>HireIntel v1.0</span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

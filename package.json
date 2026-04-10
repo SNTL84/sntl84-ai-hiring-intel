@@ -1,0 +1,14 @@
+{
+  "name": "ai-hiring-intel",
+  "version": "1.0.0",
+  "description": "AI Hiring Intelligence System — Strict, business-focused resume evaluator. Built by Milan · SNTL 84.",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "keywords": ["hiring", "ai", "resume-screening", "recruitment", "sntl84"],
+  "author": "Milan · SNTL 84 <https://desidevloper.com>",
+  "license": "MIT"
+}
