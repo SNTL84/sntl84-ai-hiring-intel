@@ -1,6 +1,6 @@
-<![CDATA[<div align="center">
+<div align="center">
 
-# 🧠 SNTL84 · AI Hiring Intel
+# 🧠 SNTL 84 · AI Hiring Intel
 
 ### Stop Drowning in Resumes. Start Hiring with Precision.
 
@@ -11,6 +11,27 @@
 [![Agentic AI](https://img.shields.io/badge/Powered_by-Agentic_AI-blueviolet?style=for-the-badge)]()
 
 > **AI-powered resume screening & hiring intelligence platform** built for founders, recruiters, and agencies who need to move fast — without sacrificing quality.
+
+---
+
+### 🤝 Collab — What's Costing You Time?
+
+**SNTL 84 | Agentic AI Workflow Professional**
+
+Lead Generation · Fulfillment Automation · Bench Resource Availability · Full-Stack Builds · AI Workflows · Supply Chain Business Intelligence
+
+🚀 *Follow for practical AI automation insights & founder systems.*
+
+| | Handle |
+|---|---|
+| 🌐 **Website** | [desidevloper.com](https://desidevloper.com) |
+| 💬 **WhatsApp** | [wa.me/919727413309](https://wa.me/919727413309) |
+| 🔗 **LinkedIn** | [linkedin.com/in/sntl2784](https://linkedin.com/in/sntl2784) |
+| 💻 **GitHub** | [github.com/SNTL84](https://github.com/SNTL84) |
+| 📸 **Instagram** | [@desibiztrade](https://www.instagram.com/desibiztrade) |
+| 🔴 **YouTube** | [@SNTL84](https://youtube.com/@SNTL84) |
+
+> 👉 **Follow, like & connect on all handles above for future collaboration opportunities, open-source drops, and AI automation insights.**
 
 </div>
 
@@ -128,24 +149,7 @@ sntl84-ai-hiring-intel/
 | 🚀 **Custom Build** | White-labeled, ATS-integrated, branded | $1,500–$5,000 |
 | 📅 **Retainer** | Monthly screening ops + model tuning | $300–$800/mo |
 
-**Interested in a custom setup?** → [Book a call](https://instagram.com/desizbiztrade) or DM on Instagram [@desizbiztrade](https://instagram.com/desizbiztrade)
-
----
-
-## 🧑‍💼 Built By
-
-<div align="center">
-
-**SNTL 84 | Agentic AI Workflow Professional**
-
-*Lead Generation · Fulfillment Automation · AI Hiring Systems · Open Source Contributor*
-
-[![GitHub](https://img.shields.io/badge/GitHub-SNTL84-181717?style=flat-square&logo=github)](https://github.com/SNTL84)
-[![Instagram](https://img.shields.io/badge/Instagram-desizbiztrade-E4405F?style=flat-square&logo=instagram)](https://instagram.com/desizbiztrade)
-[![YouTube](https://img.shields.io/badge/YouTube-@SNTL84-FF0000?style=flat-square&logo=youtube)](https://youtube.com/@SNTL84)
-[![Portfolio](https://img.shields.io/badge/Portfolio-desidevloper.com-0A0A0A?style=flat-square&logo=vercel)](https://desidevloper.com)
-
-</div>
+**Interested in a custom setup?** → [DM on Instagram @desibiztrade](https://www.instagram.com/desibiztrade) or [Chat on WhatsApp](https://wa.me/919727413309)
 
 ---
 
@@ -158,6 +162,28 @@ If this saves you hiring time or money, **star it** — it helps more founders d
 ---
 
 <div align="center">
-  <sub>MIT Licensed · Built with 🔥 by <a href="https://github.com/SNTL84">SNTL84</a> · June 2026</sub>
+
+## 🪷 Built By · SNTL 84
+
+**Agentic AI Workflow Professional**
+
+*Lead Generation · Fulfillment Automation · Bench Resource Availability · Full-Stack Builds · AI Workflows · Supply Chain Business Intelligence*
+
+---
+
+[![Website](https://img.shields.io/badge/🌐_Website-desidevloper.com-0A0A0A?style=for-the-badge&logo=vercel)](https://desidevloper.com)
+[![WhatsApp](https://img.shields.io/badge/💬_WhatsApp-919727413309-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/919727413309)
+
+[![LinkedIn](https://img.shields.io/badge/🔗_LinkedIn-sntl2784-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/sntl2784)
+[![GitHub](https://img.shields.io/badge/💻_GitHub-SNTL84-181717?style=for-the-badge&logo=github)](https://github.com/SNTL84)
+
+[![Instagram](https://img.shields.io/badge/📸_Instagram-desibiztrade-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/desibiztrade)
+[![YouTube](https://img.shields.io/badge/🔴_YouTube-@SNTL84-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@SNTL84)
+
+---
+
+> 🚀 *Follow, like & connect across all handles for future opportunities, AI automation drops, and open-source collaborations.*
+
+<sub>MIT Licensed · Built with 🔥 by <a href="https://github.com/SNTL84">SNTL84</a> · © June 2026 · <a href="https://desidevloper.com">desidevloper.com</a></sub>
+
 </div>
-]]>
