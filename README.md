@@ -12,6 +12,12 @@
 
 > **AI-powered resume screening & hiring intelligence platform** built for founders, recruiters, and agencies who need to move fast — without sacrificing quality.
 
+### 🎥 Live Demo
+
+<!-- TODO: Replace with actual demo GIF. Record with ScreenToGif/Kap -->
+<img src="./assets/demo.gif" alt="AI Hiring Intel Demo" width="800" />
+
+
 ---
 
 ### 🤝 Collab — What's Costing You Time?
